@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title></title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <h2>Validation form with jquery and bootstrap (no jQuery plugins)</h2>
+                <div id="contenido">
+                    <div class="jumbotron espacio">
+
+<form id="transferform" class="form-horizontal" role="form">
+
+    <fieldset>
+
+<!-- Form Name -->
+<legend class="text-center"><h2>Example form</h2></legend>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="text">select</label>
+  <div class="col-md-4">
+    <select id="selectbanco" name="selectbanco" class="form-control">
+      <option selected disabled value="">Select Option</option>
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="text">Input text sample</label>
+  <div class="col-md-4">
+  <input id="beneficiario" name="beneficiario" type="text" placeholder="type a text" class="form-control input-md" title="You must type a text">
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="text">another select box</label>
+  <div class="col-md-4">
+    <select id="tipodepersona" name="tipodepersona" class="form-control" title="Debe elegir el tipo de persona">
+      <option selected disabled value="">Choose</option>
+      <option value="1">Value 1</option>
+      <option value="2">Value 2</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="text">number box</label>
+  <div class="col-md-4">
+  <input id="cedula" name="cedula" type="number" placeholder="number" class="form-control input-md" title="only numbers">
+    
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group" id="cuenta_input">
+  <label class="col-md-4 control-label" for="text">20 max number</label>
+  <div class="col-md-4">
+        <div class="input-group">  
+  <input id="cuenta" name="cuenta" type="number" placeholder="20 numbers" class="form-control input-md" title="only 20" maxlength="20">
+      <div class="input-group-addon"><div id="counter"></div></div>
+      </div>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="text">Another number</label>
+  <div class="col-md-4">
+  <input id="monto" name="monto" type="number" placeholder="number" class="form-control input-md">
+    
+  </div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-4 control-label" for="text"></label>
+  <div class="col-md-4">
+        <button type="submit button" id="btn_revisartrans" name="btn_revisartrans" class="btn btn-default btn-lg btn-block" data-toggle="modal"  >Enviar</button>
+  </div>
+</div> 
+</fieldset>
+</form>
+
+               
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="vertical-alignment-helper">
+        <div class="modal-dialog vertical-align-center">
+            <div class="modal-content">
+                <div class="modal-header">
+
+                     <h3 class="modal-title text-center" id="myModalLabel">Modal popup to validate data</h3>
+                </div>
+                <div class="modal-body">
+
+        <h4><div id ="datos_verificar"></div></h4>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="col-xs-6">
+                        <button id="btn_editartransferencia" type="button" class="btn btn-default btn-lg btn-block" data-dismiss="modal">Edit data</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button id="btn_transferencia" name="btn_transferencia" type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Fin Modal -->
+                        
+                    </div>
+                </div>
+
+<!-- FIN plantilla -->
+            </div>
+        </div> 
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>
+
+
+    </body>
+</html>
